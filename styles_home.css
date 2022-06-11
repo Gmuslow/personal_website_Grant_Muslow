@@ -1,0 +1,55 @@
+body{
+    background-color: lightblue;
+}
+h1
+{
+    text-align: center;
+}
+h3
+{
+    text-align: center;
+}
+
+#Projects, #Skillset, #Education, #About
+{
+    background-color: rgb(48, 194, 175);
+    color: white;
+    
+    font-family: sans-serif;
+    font-size:larger;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+    width: 50%;
+}
+@keyframes sectionHeaderHover
+{
+    0%{width:50%;
+        background-color: rgb(48, 194, 175);}
+    10%{width:48%;}
+    100%{width:100%;
+        background-color: rgb(31, 162, 145);}
+}
+#Projects:hover, #Skillset:hover, #Education:hover, #About:hover
+{
+    animation: sectionHeaderHover;
+    animation-duration: .75s;
+    background-color: rgb(31, 162, 145);
+    width:100%;
+    cursor: pointer;
+}
+#Projects > span::after, #Skillset > span::after, #Education > span::after, #About > span::after
+{
+    float: right;
+    right: 50%;
+    content: ">";
+    animation: rotateArrow;
+    animation-duration: .75s;
+}
+@keyframes rotateArrow {
+    0%{transform: rotate(0)}
+    100%{transform: rotate(90)}
+}
+
+
